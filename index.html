@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hbd MEY</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  </head>
+  <body
+    style="background-image: url(https://plus.unsplash.com/premium_photo-1689518469262-6f9499412ef0?q=80&w=2045&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)"
+    class="flex justify-center h-screen items-center"
+  >
+    <div class="bg-white border px-10 py-8 border-gray-300 shadow-lg-blue-300 rounded-xl text-center animate__animated animate__bounceInUp m-8 w-80" id="kartu">
+      <h1 class="text-3xl">HAPPY BIRTHDAY</h1>
+      <h1 class="text-4xl text-pink-500 font-bold animate__animated animate__heartBeat animated__infinite">Sayangkuu</h1>
+      <button class="p-2 bg-pink-600 text-white rounded mt-5 hover:bg-pink-900 transition ease-in w-full animate__animated animate__delay-1s animate__tada" onclick="ubahKartu()">Klik ya sayang</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <script>
+      const count = 200,
+        defaults = {
+          origin: { y: 0.7 },
+        };
+
+      function fire(particleRatio, opts) {
+        confetti(
+          Object.assign({}, defaults, opts, {
+            particleCount: Math.floor(count * particleRatio),
+          })
+        );
+      }
+
+      fire(0.25, {
+        spread: 26,
+        startVelocity: 55,
+      });
+
+      fire(0.2, {
+        spread: 60,
+      });
+
+      fire(0.35, {
+        spread: 100,
+        decay: 0.91,
+        scalar: 0.8,
+      });
+
+      fire(0.1, {
+        spread: 120,
+        startVelocity: 25,
+        decay: 0.92,
+        scalar: 1.2,
+      });
+
+      fire(0.1, {
+        spread: 120,
+        startVelocity: 45,
+      });
+      let kartu = document.getElementById("kartu");
+      function ubahKartu() {
+        kartu.innerHTML = `<h1 class="font-semibold text-wrap animated__animated animate__zoomIn">
+      Selamat ulang tahun, cintaku. Terima kasih telah menjadi bagian terindah dalam hidupku. Setiap hari bersamamu adalah anugerah, dan di hari spesialmu ini, aku hanya ingin kau tahu betapa besar cinta dan syukurku atas kehadiranmu.
+      Semoga semua impianmu tercapai, dan semoga aku bisa terus menemanimu dalam setiap langkah perjalananmu. Aku mencintaimu hari ini, besok, dan selamanya
+    </h1>`;
+      }
+    </script>
+  </body>
+</html>
